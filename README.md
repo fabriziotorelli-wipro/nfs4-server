@@ -75,4 +75,10 @@ In this way in your DNS4 Server you will have a share of three folders :
 To test the NFS4 Server Example on ubuntu :
 * update the ubuntu packages cache `apt-get update`
 * install the nfs-common package `apt-get install -y nfs-common`
-* mount the fs : (eg. on the same machine : `mount -rw -v -t nfs -o proto=tcp,port=2049  localhost:/ /media`)
+* clean your system canche by unused space :
+```
+apt-get -y autoremove && \
+    apt-get -y clean && \
+    rm -rf /var/lib/apt/lists/*
+```
+* mount the nfs path from the server : (eg. on the same machine : `mount -rw -v -t nfs -o proto=tcp,port=2049  localhost:/ /media`)
