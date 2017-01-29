@@ -1,0 +1,3 @@
+/mnt		*(rw,fsid=0,root_squash,no_subtree_check,insecure)
+/mnt/volume		*(rw,fsid=0,root_squash,no_subtree_check,insecure)
+/mnt/backup		*(rw,fsid=0,root_squash,no_subtree_check,insecure)
