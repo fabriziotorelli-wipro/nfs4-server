@@ -82,3 +82,8 @@ apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 ```
 * mount the nfs path from the server : (eg. on the same machine : `mount -rw -v -t nfs -o proto=tcp,port=2049  localhost:/ /media`)
+
+
+## License
+
+[MIT](/LICENSE.md)
