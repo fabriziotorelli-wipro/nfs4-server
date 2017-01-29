@@ -1,27 +1,32 @@
 NFS4 Server
-================
+===========
+
+[On Github](https://github.com/fabriziotorelli-wipro/nfs4-server.git)
 
 Uses :
 
 [NFS v4 server](http://nfs.sourceforge.net/) server running on [Alpine Linux](https://hub.docker.com/_/alpine/).
-
-### Table of Contents
-* [Prerequisites](#Prerequisites)
-* [Before you start](#Configuration)
-* [Start Server](#Start-server)
-* [Set your own exports](#Set-your-own-exports)
-* [Stop Server](#Stop-server)
-* [Troubleshoot & Debug](#Troubleshoot-&-Debug)
-* [General Info](#General-Info)
 
 
 ### Prerequisites
 [**Get docker !**](https://docs.docker.com/linux/started/)
 
 
-### Configuration
+## Configuration
+
 The server uses a generic export file (exports) with-in the mount points and the relative disk capping.
-You have to define a docker compose, the volume within your export file and the share of the mount points defined in the export files, then the image and the
+You have to define a docker compose, the volume within your export file and the share of the mount points defined in the export files, then the image and the port exports as shown in the provided [**example**](/sample)
+
+
+## Issues
+
+[Open an issue](https://github.com/fabriziotorelli-wipro/nfs4-server/issues)
+
+
+## Build the image
+
+There is not yet any registration in the docker hub, however you can follow the example and use the script file [create-docker-image.sh](/create-docker-image.sh).
+
 
 ## Quickstart
 
@@ -63,3 +68,11 @@ In this way in your DNS4 Server you will have a share of three folders :
 * /nfs
 * /volume
 * /backup
+
+
+## Test
+
+To test the NFS4 Server Example on ubuntu :
+* update the ubuntu packages cache `apt-get update`
+* install the nfs-common package `apt-get install -y nfs-common`
+* mount the fs : (eg. on the same machine : `mount -rw -v -t nfs -o proto=tcp,port=2049  localhost:/ /media`)
