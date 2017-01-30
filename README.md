@@ -75,7 +75,7 @@ In this way in your DNS4 Server you will have a share of three folders :
 To test the NFS4 Server Example on ubuntu :
 * update the ubuntu packages cache `apt-get update`
 * install the nfs-common package `apt-get install -y nfs-common`
-* clean your system canche by unused space :
+* clean your system libraries cache by unused space :
 ```
 apt-get -y autoremove && \
     apt-get -y clean && \
