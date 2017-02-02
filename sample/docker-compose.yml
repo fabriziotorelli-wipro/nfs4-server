@@ -1,7 +1,7 @@
 nfs-server:
   image: nfs4-server:1.0
   container_name: nfs-server
-
+  restart: unless-stopped
   # Required to load kernel NFS module
   privileged: true
 
@@ -19,3 +19,7 @@ nfs-server:
     - "111:111/udp"
     - "2049:2049/tcp"
     - "2049:2049/udp"
+
+  build:
+    context: ../
+    dockerfile: Dockerfile
